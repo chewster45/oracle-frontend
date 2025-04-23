@@ -1,9 +1,12 @@
 import React, { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+import Card from "./components/ui/card/Card";
+import CardContent from "./components/ui/card/CardContent";
+import Badge from "./components/ui/badge/Badge";
+import Tabs from "./components/ui/tabs/Tabs";
+import TabsList from "./components/ui/tabs/TabsList";
+import TabsTrigger from "./components/ui/tabs/TabsTrigger";
+import Input from "./components/ui/input/Input";
+import Button from "./components/ui/button/Button";
 
 export default function PatternDashboard() {
   const [userQuestion, setUserQuestion] = useState("");
@@ -80,8 +83,6 @@ export default function PatternDashboard() {
         </TabsList>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {/* ...existing system detail cards remain unchanged... */}
-
           <Card>
             <CardContent className="p-4 space-y-4">
               <h2 className="text-lg font-semibold mb-2">💬 Ask the Oracle</h2>
