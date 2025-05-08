@@ -5,7 +5,8 @@ import BirthDateStep from './BirthDateStep';
 import BirthTimeStep from './BirthTimeStep';
 import BirthPlaceStep from './BirthPlaceStep';
 import MBTIStep from './MBTIStep';
-// (We'll add more steps later)
+import ConfirmStep from './ConfirmStep';
+import ThankYou from './ThankYou';
 
 const OnboardingContainer = () => {
   const [onboardingData, setOnboardingData] = useState({});
@@ -17,7 +18,8 @@ const OnboardingContainer = () => {
       <Route path="birthtime" element={<BirthTimeStep data={onboardingData} setData={setOnboardingData} />} />
       <Route path="birthplace" element={<BirthPlaceStep data={onboardingData} setData={setOnboardingData} />} />
       <Route path="mbti" element={<MBTIStep data={onboardingData} setData={setOnboardingData} />} />
-      {/* Add more routes here as we build */}
+      <Route path="confirm" element={<ConfirmStep data={onboardingData} />} />
+      <Route path="thankyou" element={<ThankYou />} />
     </Routes>
   );
 };
